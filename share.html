@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Remark</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif', 'MicroSoft YaHei';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz','MicroSoft YaHei';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; color: #f1f1f1;}
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .remark-slide>.left {
+        text-align: left;
+      }
+      .gl {
+        color: rgb(249, 38, 114);
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# 高效开发利器 - [NEI](http://nei.hz.netease.com)
+[ @hzgongke ]
+---
+# .center[Web 开发中的 .gl[绊脚石]]
+[ Feel Bad ]
+---
+class: left
+- ### 项目.gl[初始化]各种 new file
+
+- ### FE 高度.gl[依赖] BE 环镜(特别是维护阶段)
+
+- ### FE 需要.gl[等待] BE 的接口完成
+
+- ### BE 接口需要.gl[手动]管理
+
+- ### 需要手动 .gl[Mock Data]
+
+- ......
+---
+# .center[不一般的 .gl[挖掘机]]
+[ Nice Day ]
+---
+class: left
+- ### 接口.gl[可视化]定义、管理、测试
+
+- ### 本地开启.gl[模拟容器 Puer]，不依赖后端环境
+
+- ### 项目目录和文件.gl[自动]生成
+
+- ### 支持 .gl[Mock Data]，前后端并行开发
+
+- ......
+---
+# .center[NEI Tools]
+
+## [NEI](http://nei.hz.netease.com/)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[Puer](http://youfan.netease.com/puer)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[Phosphorus](https://github.com/NEYouFan/phosphorus)
+---
+# .center[Sample]
+[ 简单的栗子 ]
+---
+.left[
+### .gl[01] FE & BE 接口规范定义
+### .gl[02] FE 根据项目 ID 生成项目
+### .gl[03] 前后端并行开发( FE 界面开发，BE 接口开发)
+### .gl[04] BE 接口测试
+### .gl[05] FE & BE 接口联调
+]
+---
+# .center.gl[Q & A]
+---
+# .center.gl[THANKS!]
+    </textarea>
+    <script src="http://remarkjs.com/downloads/remark-latest.min.js">
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="http://remarkjs.com/remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true
+        }) ;
+    </script>
+  </body>
+</html>
